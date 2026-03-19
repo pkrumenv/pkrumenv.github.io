@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>  
+    <meta charset="UTF-8">
+    <title> Laboratorio</title>
+    <link rel="stylesheet" href="stylesLab.css">
+</head>
+
+
+<body>
+    <h1>Personal Page</h1>
+
+    <div>   
+        <ul>    
+            <li>Name: Pablo Krumenaker Vigneaux</li>
+            <li>Major: Ingeniería Civil en Ciencias de la Computación</li>
+            <li>Year of Enrollment: 2024</li>
+            <li><a href="https://github.com/pkrumenv/pkrumenv.github.io#">Github</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>About me: </h2>
+        <p>I'm 21 years old and I'm studying computer cience because I really like computers, math and playing video games with my friends.
+
+        </p>
+    </div>
+
+    <div>
+        <h2>Skills:</h2>
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td class="green">Advanced</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td class="yellow">Intermediate</td>
+            </tr>
+            <tr>
+                <td>HTML/CSS</td>
+                <td class="red">Basic</td>
+            </tr>
+            <tr>
+                <td>SQL</td>
+                <td class="yellow">Intermediate</td>
+            </tr>
+            <tr>
+                <td>C/C++</td>
+                <td class="green">Advanced</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td class="green">Advanced</td>
+            </tr>
+            <tr>
+                <td>Spanish</td>
+                <td id="top">Native</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div>
+        <h2>Notes: </h2>
+        <input type="text" id="notesInput">
+        <button onclick="addText()">Add</button>
+
+        <script>
+            function addText() {
+                const input = document.getElementById("notesInput");
+                const texto = input.value.trim();
+
+                if (texto === "") {
+                    return;
+                }
+
+                const lista = document.getElementById("list");
+
+                const nuevoItem = document.createElement("li");
+                nuevoItem.textContent = texto;
+
+                lista.appendChild(nuevoItem);
+
+                input.value = "";
+                }
+        </script>
+        <ul id="list"></ul>
+    </div>
+    <img src="me.jpeg" alt="literally me">
+
+
+</body>
+
+</html>
